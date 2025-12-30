@@ -32,3 +32,31 @@ class Solution {
         return sum;
     }
 }
+
+class Solution2 {
+    public int trap(int[] height) {
+
+        int sum = 0;
+        int n = height.length;
+        int l = 0, r = n - 1;
+
+        int lMax = 0, rMax = 0;
+
+        while (l < r) {
+            lMax = Math.max(lMax, height[l]);
+            rMax = Math.max(rMax, height[r]);
+
+            if (lMax < rMax) {
+                sum += lMax - height[l];
+                l++;
+            }
+            else {
+                sum += rMax - height[r];
+                r--;
+            }
+        }
+
+        return sum;
+    }
+}   
+
