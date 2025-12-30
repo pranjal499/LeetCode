@@ -2,6 +2,7 @@ package LeetCode.arrays;
 
 public class q42 {
     public static void main(String[] args) {
+        // Solution
         
     }
 }
